@@ -1,0 +1,1215 @@
+:root {
+    --dark-color: rgba(90, 36, 0, 0.97);
+    --light-color: #e9a167;
+    --lighter-color: rgb(248, 214, 195);
+
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    
+    background-color: rgba(205, 199, 183, 0.362);
+    color: rgb(255, 255, 255);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 1.2em; /* Increase base font size */
+}
+
+/* Header */
+#header_gcontainer {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    background-color: var(--dark-color);
+    justify-content: space-around;
+    padding: 10px 20px;
+    position:sticky; /* Keeps it at the top */
+    top: 0; /* Ensures it's at the top */
+    left: 0; /* Aligns to the left edge */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 1000; /* Optional shadow for better visibility */
+}
+
+#header_gcontainer h1 {
+    font-size: 2em;
+    margin: 20px 5px;
+    color: white;
+    text-shadow: #666 3px 1px;
+}
+
+#nav_bar {
+    display: flex;
+    flex-direction: row;
+    gap:15px;
+
+}
+
+#nav_options {
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    gap: 15px;
+    margin: 0;
+}
+
+#nav_options li {
+    background-color: transparent;
+    border: 1px solid white;
+    border-radius: 35px;
+    padding: 10px 20px; /* Bigger padding for pill shape */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s;
+    cursor: pointer;
+}
+
+#nav_options a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.1em;
+}
+
+#nav_options li:hover {
+    background-color: white;
+    color: var(--dark-color);
+}
+
+#nav_options li {
+    background-color: transparent;
+    border: 2px solid white;
+    border-radius: 20px;
+    padding: 8px 20px;
+    transition: background-color 0.3s ease;
+}
+
+#nav_options li:hover {
+    background-color: var(--light-color);
+    color: white;
+}
+
+
+#hamburger {
+    display: none;
+    font-size: 1.5em;
+    color: white;
+    cursor: pointer;
+}
+
+@media (max-width: 900px) {
+    #header_gcontainer {
+        opacity: 100%;
+    }
+}
+section.middle-section{
+    background-color: var(--lighter-color);
+}
+section.middle-section h3 {
+    color: var(--dark-color);
+    text-align: center;
+    margin-top: 3%;
+
+  }
+  
+section.middle-section p {
+    color:   var(--dark-color);
+    text-align: center;
+
+    font-size: 1.3em;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 2%;
+    margin-bottom: 3%;
+
+    
+
+  }
+
+/* Top Picks Styling */
+.top-picks-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 80%;
+margin-left: 10%;
+
+}
+
+.top-pick {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 90%;
+    margin: 15px 0;
+    padding: 10px;
+    background-color: rgba(187, 156, 147, 0.259);
+    border-radius: 30px;
+    border: 2px solid var(--dark-color);
+
+}
+
+.top-pick {
+    
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+    margin-top: 1%;
+}
+
+.top-pick img {
+    width: 100px;
+    height: auto;
+    border-radius: 15px;
+    margin: 5px;
+    margin-right: 20px;
+}
+
+.top-pick h3 {
+    color: var(--dark-color);
+
+}
+.top-pick h4 {
+    text-align: left;
+    color: var(--dark-color);
+
+}
+
+
+.top-pick p {
+    text-align:left;
+    color: var(--dark-color);
+
+}
+
+#footer{
+    color: var(--dark-color);
+    bottom: 0;
+    margin-top: 2%;
+    margin-bottom: 2%;
+
+}
+
+
+#top-picks {
+    width: 90%;
+    margin: 0 auto; /* Top and bottom margins are 0, left and right are auto */
+  }
+
+#top-picks h2{
+    color: var(--dark-color);
+    text-align: left;
+    margin-left: 10%;
+    padding-top: 3%;
+    padding-bottom: 2%;
+
+}
+
+/* New Additions Styling */
+#new-additions {
+    width: 80%;
+    padding: 8% 10% 3% 10%;
+    background-color: white;
+    text-align: center;
+    background-image: url(leaves-8184622_960_720.png);
+    background-color: rgba(255, 255, 255, 0.486);
+    background-blend-mode: overlay;
+
+    
+
+}
+
+#new-additions h2 {
+    color: var(--dark-color);
+    font-size: 2em;
+    margin-bottom: 10px;
+    text-align: left;
+    padding-left: 80px ;
+    font-family: 'Poppins', sans-serif;
+}
+
+.carousel {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: 90%;
+    overflow: hidden;
+    margin: auto;
+    
+}
+
+.carousel-track {
+    display: flex;
+    gap: 20px;
+    transition: transform 0.5s ease-in-out;
+    margin-left: 50%;
+    
+}
+
+.book-item {
+    text-align: center;
+    min-width: 200px;
+    flex-shrink: 0;
+    padding: 1%;
+}
+
+.book-item img {
+    width: 280px;
+    height: 400px;
+    border-radius: 10px;
+    border-width: 10px;
+    border-color: black;
+}
+
+.book-item .book-title {
+    display: block;
+    margin-top: 10px;
+    font-size: 1em;
+    color: var(--dark-color);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.book-item .book-title:hover {
+    color: var(--light-color);
+}
+
+.carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: var(--dark-color);
+    color: white;
+    border: none;
+    width: 50px; /* Set width */
+    height: 50px; /* Set height */
+    cursor: pointer;
+    font-size: 1.5em;
+    z-index: 1;
+    border-radius: 50%; /* Makes it round */
+    transition: background-color 0.3s;
+}
+
+.carousel-btn:hover {
+    background-color: var(--light-color);
+}
+
+.prev-btn {
+    left: 10px;
+}
+
+.next-btn {
+    right: 10px;
+}
+
+
+/* findbooks css */
+
+
+/*The code for the book search page (SearchResults.php)*/
+ 
+    /* Grid item*/
+    .bi_fcontainer{
+        border-radius: 12px ;
+        display: flex;
+        flex-direction: column;
+        align-self: center;
+        align-items: center;
+        justify-content: center;
+        background-color: rgb(248, 214, 195);
+        width:100%;
+    }
+
+    /*For the favourite button*/
+    #fav_btn{
+        height: 30px;
+        width: 100px;
+        margin: 20px;
+        border-radius: 12px;
+        background-color: whitesmoke;
+        color: #e9a167;
+    }
+
+    #fav_btn:hover{
+        border: #e9a167;
+        background-color: #e9a167;
+        color: whitesmoke;
+    }
+    
+    /*Image for the book*/
+    .g_book_img{
+        display: block;
+        width: 90%;
+        height: 300px;
+        border-radius: 12px;
+    }
+
+    @media screen and (min-width:300px) {
+        #new_add_title{
+            font-size: 0.5rem
+        }
+
+        .GB_g-container{
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-auto-rows: minmax(10%, auto);
+            gap: 5px;
+        }
+    
+    }
+
+    @media screen and (min-width:301px) and (max-width:600px) {
+        #new_add_title{
+            font-size: 0.75rem;
+        }
+
+        .GB_g-container{
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-auto-rows: minmax(10%, auto);
+            gap: 5px;
+        }
+    
+    }
+
+    @media screen and (min-width:601px) {
+        #new_add_title{
+            font-size: 1.1rem;
+            
+        }
+        
+        /*Grid container which will automatically show in 3 x X(rows) */
+        .GB_g-container{
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-auto-rows: minmax(10%, auto);
+            gap: 5px;
+        }
+    }
+/*End of the code for the book search page /*The code for the book search page (SearchResults.php)*/
+
+/*Start of the code for the find books page (findBook.html)*/
+    .fbooks_gcontainer{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 50px 1fr auto;
+        gap: 50px;
+        
+    }
+
+        .fb_fcontainer{
+            display:flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+    
+            /*For the search section*/
+            .search{
+                grid-row:2/3;
+                grid-column:1/2; 
+            }
+
+            /*For the search section*/
+            .criteria{
+                grid-row: 3/4;
+                grid-column:1/2; 
+            }
+            
+            /*For the search bar header*/
+            #purpose{
+                margin: 10px;
+            }
+
+            /*For the search bar*/
+            #search_bar{
+                border-radius: 15px;
+                width:80%;
+                height: 35px;
+                margin:10px
+            }
+
+            /*For the search button*/
+            #search_btn{
+                border-radius: 15px;
+                width:40%;
+                height: 35px;
+                margin:10px
+            }
+
+/*End of the code for the find books page (findBook.html)*/
+
+
+/*Start of Code for ViewFavourites.php*/
+
+#myrev_pr_gcontainer{
+    display:grid;
+    grid-template-columns:repeat(1fr,4);
+    grid-auto-rows: minmax(100px, auto);
+    background-color: rgb(248, 214, 195);
+    border-radius: 12px;
+    gap: 5px;
+    width: 100%;
+    
+}
+
+/*Labels for the table*/
+.rev_title{
+    background-color:rgb(248, 214, 195);
+    
+}
+
+.rev_title h3{
+    text-align: center;
+}
+
+/*Labels for the table*/
+#rev_table1{
+    border-top-left-radius: 12px;
+    padding: 2px;
+    
+}
+
+/*Labels for the table*/
+#rev_table2{
+    padding: 2px;
+}
+
+/*Labels for the table*/
+#rev_table3{
+    padding: 2px;
+}
+
+#rev_table4{
+    grid-column: 4/5;
+    grid-row: 1/2;
+    border-top-right-radius: 12px;
+    padding: 2px;
+}
+
+/*flex conainer for the actual column data*/
+.rev_fcontainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: rbg(248, 214, 195);
+    
+}
+
+/*Edit button*/
+.rev_EditBtn, .rev_DelBtn{
+    width: 75px;
+    height: 30px;
+}
+
+@media screen and (max-width:393px) {
+    .rev_EditBtn, .rev_DelBtn{
+        width: 50px;
+        height: 25px;
+        margin:2px
+    } 
+
+    .flexcont{
+        display:flex; 
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #myrev_pr_gcontainer h3, #myrev_pr_gcontainer p{
+        font-size: 0.75em;
+    }
+
+}
+
+/*End ofCode for ViewFavourites.php*/
+
+/*Start of EditRevFav.php*/
+
+/*Parent grid container*/
+.alt_rev_gcontainer{
+    display: grid;
+    grid-template-columns: 100% ;
+    grid-template-rows:repeat(1fr, 4) ;
+    gap:20px;
+    background-color:rgb(248, 214, 195);
+    border-radius: 12px;
+    height: 100%;
+    width: 100%;
+    padding: 20px;
+}
+    /*Children flexbox containers*/
+    .Urev_fcontainer{
+        display: flex;
+        grid-column:1/2;
+        justify-content: center;
+    }
+    
+    #get_rating{
+        grid-row:1/2;
+    }
+    
+    #get_review{
+        grid-row: 2/3;
+    }
+
+    #get_favs{
+        grid-row:3/4;
+    }
+
+    /*Individual items*/
+    #review_input{
+        width: 75%;
+        height: 500px;
+        border-radius: 12px;
+        border: 2px solid whitesmoke;
+    }
+
+    #rating_input{
+        width: 75%;
+        border-radius: 12px;
+        border: 2px solid whitesmoke;
+    }
+
+
+    #cancel_btn, #delete_rev, #edit_rev, #insert_rev {
+        width: 100px;
+        height: 30px;
+        border-radius: 12px;
+        margin: 20px;
+    }
+
+    @media screen and (max-width:464px){
+        .alt_rev_gcontainer label, #get_rating input{
+            font-size: 0.55em;
+        }
+    }
+
+
+/*EditRevFav.php*/
+
+
+
+/* start of userreviews css */
+
+/* Book Section */
+.book-section {
+    width: 80%; /* Same width for both sections */
+    background-color: rgb(248, 214, 195);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+    padding: 30px;
+    color: black;
+    margin-top: 10%;
+}
+
+.reviews-section{
+    width: 80%; /* Same width for both sections */
+    background-color: rgb(248, 214, 195);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+    padding: 30px;
+    margin: 30px 0;
+    color: black;
+
+}
+
+.book-cover {
+    width: 180px; /* Bigger book cover */
+    height: auto;
+    border-radius: 8px;
+    margin-right: 20px;
+    float: left;
+}
+
+.book-details h2 {
+    margin-top: 0;
+    font-size: 1.5em; /* Bigger book title */
+}
+
+.book-details p {
+    margin: 10px 0;
+    font-size: 1.1em;
+}
+
+.book-cover-rating {
+    color: rgb(37, 37, 37);
+    font-size: 1.3em;
+}
+
+.book-details table {
+    border-collapse: collapse;
+    font-size: 1.2em;
+    margin-top: 10px;
+}
+
+.book-details td {
+    padding: 8px 10px;
+    vertical-align: top;
+    color: black;
+}
+
+.book-details td:first-child {
+    font-weight: bold;
+    color: var(--dark-color);
+    width: 25%;
+}
+
+/* Reviews Section */
+.reviews-section h3 {
+    text-align: center;
+    color: var(--dark-color);
+    font-size: 1.8em; /* Larger User Reviews title */
+    margin-bottom: 20px;
+}
+
+.review {
+    display: flex;
+    align-items: center;
+    padding: 20px 0;
+    border-bottom: 2px solid #ddd;
+}
+
+.review:last-child {
+    border-bottom: none;
+}
+
+.profile-pic {
+    width: 60px; /* Bigger profile pic */
+    height: 60px;
+    border-radius: 50%;
+    margin-right: 20px;
+}
+
+.review-content {
+    flex: 1;
+    text-align: left;
+}
+
+.user-name {
+    font-weight: 600;
+    color: var(--dark-color);
+    font-size: 1.1em;
+}
+
+.rating {
+    font-weight: bold;
+    color: #666;
+}
+
+.comment {
+    margin: 10px 0;
+    font-size: 1.1em;
+}
+
+.like-btn, .dislike-btn {
+    background-color: var(--dark-color);
+    color: #fff;
+    border: none;
+    border-radius: 20px;
+    padding: 8px 20px;
+    cursor: pointer;
+    font-size: 1em;
+}
+
+.like-btn:hover, .dislike-btn:hover {
+    background-color: var(--lighter-color);
+}
+
+
+.divider {
+    width: 80%;
+    height: 2px;
+    background-color: var(--lighter-color);
+    margin: 20px 0;
+}
+
+
+
+/* Modal Background and Content */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .modal-content {
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    width: 80%;
+    max-width: 600px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: relative;
+  }
+
+  .modal-content p {
+    color: #a3532d;
+    font-size: 20px;
+    font-weight: 400;
+  }
+  
+  
+  .user-profile {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .profile-pic {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    margin-right: 20px;
+  }
+  
+  .user-name {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #666;
+    
+  }
+  
+  .rating-section input {
+    width: 100%;
+    padding: 5px;
+    font-size: 1.1em;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    margin-bottom:30px;
+  }
+  
+  .review-text textarea {
+    width: 100%;
+    padding: 5px;
+    font-size: 1.1em;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    height: 150px;
+  }
+  
+  
+  #cancelBtn, #postBtn {
+    padding: 10px 20px;
+    font-size: 1.1em;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  #cancelBtn {
+    background-color: #ccc;
+    border-radius: 40px;
+    margin-top: 30px;
+  }
+  
+  #postBtn {
+    background-color: #c36938;
+    color: white;
+    border-radius: 40px;
+  }
+  
+  #postBtn:hover {
+    background-color: #a3532d;
+  }
+
+
+
+  /* login css begin here */
+
+  *{
+    padding: 0;
+    margin: 0;
+}
+
+body.SR {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    padding: 20px; /* Add padding for mobile */
+    background-color: var(--lighter-color);
+    background-size: cover; /* Ensure background covers full screen */
+}
+
+.SR {
+    font-family: Arial, sans-serif;
+    background-image: url('../images/vecteezy_minimal-landscape-background-with-pastel-color-and-line-art_9640037.jpg');
+    background-size: cover; /* Makes sure the image covers the whole background */
+    background-repeat: no-repeat; /* Ensures the image doesn't repeat */
+    background-position: center; /* Centers the image */
+    background-attachment: fixed; /* Ensures the background doesn't move with scroll */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    flex-direction: column;
+}
+
+#fullAddress {    /* 3 ways to display two divs side by side https://dev.to/dawnind/3-ways-to-display-two-divs-side-by-side-3d8b*/
+    display: grid; 
+    grid-template-columns: 1fr 1fr; 
+    grid-gap: 10px;  
+    width: 85%; 
+}
+
+.divide {
+    margin: 10px;
+}
+
+
+label {
+    display: block;
+    margin-top: 5px;
+    font-size:16px;
+    font-family:Arial, Helvetica, sans-serif;
+}
+@media (max-width:600px){
+    label {
+        margin: auto;
+        font-size:12px;
+    }
+}
+.container {
+    background-color: white;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 100%; /* Full width by default */
+    max-width: 500px; /* Restrict width for larger screens */
+    text-align: center;
+}
+.formcontainer {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    flex-grow: 1;
+    position: fixed;
+    background-color:white; 
+    width: 50vw; /* Sets the default width to 50% of the viewport width */
+    padding: 20px;
+}
+@media (max-width:600px){
+    .formcontainer {
+        margin-top: auto;
+        font-size:12px;
+    }
+}
+#step1 h2{
+    text-align:left;
+    font-size: x-large; 
+}
+
+.form-step {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+input {
+    width: 90%; /* Stretch input fields on smaller screens */
+    max-width: 400px; /* Restrict width for larger screens */
+    padding: 10px;
+    border: none;
+    border-bottom: 2px solid var(--dark-color);
+    font-size: 1em;
+    text-align: center;
+}
+
+input:focus {
+    outline: none;
+    border-bottom: 2px solid var(--light-color);
+}
+
+button {
+    width: 100%;
+    max-width: 300px; /* Restrict width for larger screens */
+    padding: 10px 20px;
+    border-radius: 25px;
+    background-color: var(--dark-color);
+    color: white;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+
+button:hover {
+    background-color: var(--light-color);
+}
+@media (max-width:600px){
+    button {
+        padding:10px;
+        margin: auto;
+        font-size:12px;
+        width: fit-content;
+        height: fit-content;
+    }
+}
+.checkbox{
+    display: grid; 
+    grid-template-columns: 1fr 1fr; 
+    grid-gap: 10px;  
+    width: 70%; 
+}
+.checkbox label, .checkbox input{
+    margin-top:5px;
+    padding: 1px;     
+}
+
+.warning {
+    color: red;
+    width:fit-content;
+    position:sticky;
+    font-size: 12px;
+    font-size: 0.9em;
+    white-space: nowrap;
+    padding: 10px;
+    height: 1em;
+    text-overflow: ellipsis; /* Adds ellipsis (...) for overflowed text */
+    word-break: break-all; /* Ensures any string of characters break within the container */
+    word-wrap: break-word; /* Ensures words break within the container */
+}
+
+.SR  {
+    font-family: Arial, sans-serif;
+    background-image:url(vecteezy_minimal-landscape-background-with-pastel-color-and-line-art_9640037.jpg);
+    background-size: cover; /* Makes sure the image covers the whole background */
+    background-repeat: no-repeat; /* Ensures the image doesn't repeat */
+    background-position: center; /* Centers the image */
+    background-attachment: fixed; /* Ensures the background doesn't move with scroll */
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    flex-direction: column;
+}
+#fullAddress {    /* 3 ways to display two divs side by side https://dev.to/dawnind/3-ways-to-display-two-divs-side-by-side-3d8b*/
+    display: grid; 
+    grid-template-columns: 1fr 1fr; 
+    grid-gap: 10px;  
+    width: 85%; 
+}
+
+.divide {
+    margin: 5px;
+}
+
+
+label {
+    display: block;
+    margin-top: 3px;
+    font-size:16px;
+    font-family:Arial, Helvetica, sans-serif;
+}
+@media (max-width:600px){
+    label {
+        margin: auto;
+        font-size:12px;
+    }
+}
+.container {
+    background-color: white;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgba(192, 7, 161, 0.1);
+    width: 30%;
+    text-align: center;
+    padding-top: 0;
+}
+.formcontainer {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    flex-grow: 1;
+    position:sticky;
+    background-color:white; 
+    width: 50vw; /* Sets the default width to 50% of the viewport width */
+    padding: 20px;
+    margin-top: 15%;
+    margin-bottom: 4%;
+    border-radius: 20px;
+}
+
+
+
+#reg-title{
+    color: var(--dark-color);
+    padding-bottom: 30px;
+}
+
+#step1 h2{
+    text-align:center;
+    font-size: 2em; 
+    color: var(--dark-color);
+    margin: 15px;
+}
+
+.form-step {
+    display: flex;
+    flex-direction: column;
+}
+
+.first label{
+    color: var(--dark-color);
+    text-align: left;
+    margin-left: 50px;
+}
+
+input {
+    padding: 10px;
+    width:80% ;
+    border: none;
+    border-bottom: 1px solid var(--dark-color); /*https://stackoverflow.com/questions/3131072/how-to-change-input-text-box-style-to-line*/
+}
+.back-link{
+padding-left: 20px;
+}
+
+button {
+    margin-top: 10px;
+    padding: 10px;
+    width:5vw; 
+    height:fit-content;
+    background-color: var(--dark-color); 
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 15px;
+    cursor: pointer;
+    text-align: center;
+}
+
+button:hover {
+    background-color: #20ba1b;
+}
+@media (max-width:600px){
+    button {
+        padding:10px;
+        margin: auto;
+        font-size:12px;
+        width: fit-content;
+        height: fit-content;
+    }
+}
+.checkbox{
+    display: grid; 
+    grid-template-columns: 1fr 1fr; 
+    grid-gap: 10px;  
+    width: 70%; 
+}
+.checkbox label, .checkbox input{
+    margin-top:3px;
+    padding: 1px;     
+}
+
+.warning {
+    color: red;
+    width:fit-content;
+    position:sticky;
+    font-size: 12px;
+    font-size: 0.9em;
+    white-space: nowrap;
+    padding: 10px;
+    height: 1em;
+    text-overflow: ellipsis; /* Adds ellipsis (...) for overflowed text */
+    word-break: break-all; /* Ensures any string of characters break within the container */
+    word-wrap: break-word; /* Ensures words break within the container */
+}
+
+/* Mobile Navigation Styles */
+@media (max-width: 1024px) {
+    #hamburger {
+        display: block; /* Show hamburger */
+    }
+
+    #nav_bar {
+        display: none; /* Hide navbar initially */
+        flex-direction: column;
+        position: absolute;
+        top: 60px; /* Adjust for header height */
+        left: 0;
+        width: 100%;
+        background-color: var(--dark-color);
+        padding: 10px 0;
+        z-index: 1000;
+    }
+
+    #hamburger.active + #nav_bar {
+        display: flex; /* Show navbar when hamburger is active */
+    }
+
+    #nav_options {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    #nav_options li {
+        padding: 10px;
+    }
+}
+
+/* Desktop Styles */
+@media (min-width: 1025px) {
+    #hamburger {
+        display: none; /* Hide hamburger for desktops */
+    }
+
+    #nav_bar {
+        display: flex; /* Always visible navbar */
+    }
+}
+
+/* Additional Styling */
+h2, h3 {
+    color: var(--dark-color);
+    text-align: center;
+}
+
+/* Footer */
+#footer {
+    text-align: center;
+    margin-top: 20px;
+    padding: 10px;
+    color: var(--dark-color);
+}
+
+@media (max-width: 600px) {
+    body.SR {
+        padding: 10px; /* Add spacing for small screens */
+    }
+
+    .container {
+        padding: 20px;
+        border-radius: 15px;
+    }
+
+    h2 {
+        font-size: 1.5em; /* Adjust heading size */
+    }
+
+    input, button {
+        width: 100%; /* Full width for inputs and buttons */
+    }
+
+    a {
+        font-size: 0.9em;
+    }
+}

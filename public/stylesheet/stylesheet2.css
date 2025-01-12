@@ -1,0 +1,375 @@
+:root {
+    --dark-color: rgba(90, 36, 0, 0.97);
+    --light-color: #e9a167;
+    --lighter-color: rgb(248, 214, 195);
+
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    
+    background-color: rgba(205, 199, 183, 0.362);
+    color: rgb(255, 255, 255);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 1.2em; /* Increase base font size */
+}
+
+/* Header */
+#header_gcontainer {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    background-color: var(--dark-color);
+    justify-content: space-around;
+    padding: 10px 20px;
+    position: sticky; /* Keeps it at the top */
+    top: 0; /* Ensures it's at the top */
+    left: 0; /* Aligns to the left edge */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 1000; /* Optional shadow for better visibility */
+}
+
+#header_gcontainer h1 {
+    font-size: 2em;
+    margin: 20px 5px;
+    color: white;
+    text-shadow: #666 3px 1px;
+}
+
+#nav_bar {
+    display: flex;
+    flex-direction: row;
+    gap:15px;
+
+}
+
+#nav_options {
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    gap: 15px;
+    margin: 0;
+}
+
+#nav_options li {
+    background-color: transparent;
+    border: 1px solid white;
+    border-radius: 35px;
+    padding: 10px 20px; /* Bigger padding for pill shape */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s;
+    cursor: pointer;
+}
+
+#nav_options a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.1em;
+}
+
+#nav_options li:hover {
+    background-color: white;
+    color: var(--dark-color);
+}
+
+#nav_options li {
+    background-color: transparent;
+    border: 2px solid white;
+    border-radius: 20px;
+    padding: 8px 20px;
+    transition: background-color 0.3s ease;
+}
+
+#nav_options li:hover {
+    background-color: var(--light-color);
+    color: white;
+}
+
+
+#hamburger {
+    display: none;
+    font-size: 1.5em;
+    color: white;
+    cursor: pointer;
+}
+
+@media (max-width: 900px) {
+    #header_gcontainer {
+        opacity: 100%;
+    }
+}
+
+
+#footer {
+    bottom: 0;
+    text-align: center;
+    margin-top: 20px;
+    padding: 10px;
+    color: var(--dark-color);
+}
+
+/*The code for the book search page (SearchResults.php)*/
+ 
+    /* Grid item*/
+    .bi_fcontainer{
+        border-radius: 12px ;
+        display: flex;
+        flex-direction: column;
+        align-self: center;
+        align-items: center;
+        justify-content: center;
+        background-color: rgb(248, 214, 195);
+        width:100%;
+    }
+
+    /*For the favourite button*/
+    #fav_btn{
+        height: 30px;
+        width: 100px;
+        margin: 20px;
+        border-radius: 12px;
+        background-color: whitesmoke;
+        color: #e9a167;
+    }
+
+    #fav_btn:hover{
+        border: #e9a167;
+        background-color: #e9a167;
+        color: whitesmoke;
+    }
+    
+    /*Image for the book*/
+    .g_book_img{
+        display: block;
+        width: 90%;
+        height: 300px;
+        border-radius: 12px;
+    }
+
+    @media screen and (min-width:300px) {
+        #new_add_title{
+            font-size: 0.5rem
+        }
+
+        .GB_g-container{
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-auto-rows: minmax(10%, auto);
+            gap: 5px;
+        }
+    
+    }
+
+    @media screen and (min-width:301px) and (max-width:600px) {
+        #new_add_title{
+            font-size: 0.75rem;
+        }
+
+        .GB_g-container{
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-auto-rows: minmax(10%, auto);
+            gap: 5px;
+        }
+    
+    }
+
+    @media screen and (min-width:601px) {
+        #new_add_title{
+            font-size: 1.1rem;
+            
+        }
+        
+        /*Grid container which will automatically show in 3 x X(rows) */
+        .GB_g-container{
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-auto-rows: minmax(10%, auto);
+            gap: 5px;
+        }
+    }
+
+/*Start of Code for ViewFavourites.php*/
+
+#myrev_pr_gcontainer{
+    display:grid;
+    grid-template-columns:repeat(1fr,4);
+    grid-auto-rows: minmax(100px, auto);
+    background-color: rgb(248, 214, 195);
+    border-radius: 12px;
+    gap: 5px;
+    width: 100%;
+    
+}
+
+/*Labels for the table*/
+.rev_title{
+    background-color:rgb(248, 214, 195);
+    
+}
+
+.rev_title h3{
+    text-align: center;
+}
+
+/*Labels for the table*/
+#rev_table1{
+    border-top-left-radius: 12px;
+    padding: 2px;
+    
+}
+
+/*Labels for the table*/
+#rev_table2{
+    padding: 2px;
+}
+
+/*Labels for the table*/
+#rev_table3{
+    padding: 2px;
+}
+
+#rev_table4{
+    grid-column: 4/5;
+    grid-row: 1/2;
+    border-top-right-radius: 12px;
+    padding: 2px;
+}
+
+/*flex conainer for the actual column data*/
+.rev_fcontainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: rbg(248, 214, 195);
+    
+}
+
+/*Edit button*/
+.rev_EditBtn, .rev_DelBtn{
+    width: 75px;
+    height: 30px;
+}
+
+@media screen and (max-width:393px) {
+    .rev_EditBtn, .rev_DelBtn{
+        width: 50px;
+        height: 25px;
+        margin:2px
+    } 
+
+    .flexcont{
+        display:flex; 
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #myrev_pr_gcontainer h3, #myrev_pr_gcontainer p{
+        font-size: 0.75em;
+    }
+
+}
+
+/*End ofCode for ViewFavourites.php*/
+
+/*Start of EditRevFav.php*/
+
+/*Parent grid container*/
+.alt_rev_gcontainer{
+    display: grid;
+    grid-template-columns: 100% ;
+    grid-template-rows:repeat(1fr, 4) ;
+    gap:20px;
+    background-color:rgb(248, 214, 195);
+    border-radius: 12px;
+    height: 100%;
+    width: 100%;
+    padding: 20px;
+}
+    /*Children flexbox containers*/
+    .Urev_fcontainer{
+        display: flex;
+        grid-column:1/2;
+        justify-content: center;
+    }
+    
+    #get_rating{
+        grid-row:1/2;
+    }
+    
+    #get_review{
+        grid-row: 2/3;
+    }
+
+    #get_favs{
+        grid-row:3/4;
+    }
+
+    /*Individual items*/
+    #review_input{
+        width: 75%;
+        height: 500px;
+        border-radius: 12px;
+        border: 2px solid whitesmoke;
+    }
+
+    #rating_input{
+        width: 75%;
+        border-radius: 12px;
+        border: 2px solid whitesmoke;
+    }
+
+
+    #cancel_btn, #delete_rev, #edit_rev, #insert_rev {
+        width: 100px;
+        height: 30px;
+        border-radius: 12px;
+        margin: 20px;
+    }
+
+    @media screen and (max-width:464px){
+        .alt_rev_gcontainer label, #get_rating input{
+            font-size: 0.55em;
+        }
+    }
+
+
+/*EditRevFav.php*/
+
+@media (max-width: 1024px) {
+    #hamburger {
+        display: block; /* Show hamburger */
+    }
+
+    #nav_bar {
+        display: none; /* Hide navbar initially */
+        flex-direction: column;
+        position: absolute;
+        top: 60px; /* Adjust for header height */
+        left: 0;
+        width: 100%;
+        background-color: var(--dark-color);
+        padding: 10px 0;
+        z-index: 1000;
+    }
+
+    #hamburger.active + #nav_bar {
+        display: flex; /* Show navbar when hamburger is active */
+    }
+
+    #nav_options {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    #nav_options li {
+        padding: 10px;
+    }
+}
